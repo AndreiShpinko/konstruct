@@ -33,9 +33,9 @@
   scroll(document.querySelector("a.first__scroll"));
 
   document.querySelectorAll("a.nav-link").forEach((link) => {
+    scroll(link);
     link.addEventListener("click", function (e) {
       e.preventDefault();
-      scroll(link);
       toggleClasses();
     });
   });
