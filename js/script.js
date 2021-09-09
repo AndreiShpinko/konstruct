@@ -34,10 +34,12 @@
 
   document.querySelectorAll("a.nav-link").forEach((link) => {
     scroll(link);
-    link.addEventListener("click", function (e) {
-      e.preventDefault();
-      toggleClasses();
-    });
+    if (document.documentElement.clientWidth < 767) {
+      link.addEventListener("click", function (e) {
+        e.preventDefault();
+        toggleClasses();
+      });
+    }
   });
 
   burger.addEventListener("click", function (e) {
